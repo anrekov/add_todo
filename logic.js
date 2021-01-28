@@ -1,48 +1,51 @@
+// TODO form has submit function
+
 function createCloseButton(li) {
     let span = document.createElement('SPAN');
-    let txt = document.createTextNode('\u00D7');
 
+    span.innerText = '\u00D7';
     span.className = 'close';
-    span.appendChild(txt);
     li.appendChild(span);
 
-    span.onclick = () => span.parentElement.style.display = 'none';
+    span.onclick = () => span.parentElement.remove();
 }
-  
+
 // Всем li создать кнопку удаления
 document.querySelectorAll('li').forEach(createCloseButton);
 
 // Добавление класса при нажатии на элемент li
 document.querySelector('ul').addEventListener('click', (e) => {
-if (e.target.tagName === 'LI')
-    e.target.classList.toggle('checked');
+    if (e.target.tagName === 'LI')
+        e.target.classList.toggle('checked');
 });
 
 // Добавление li с заданным значением
 function add() {
     let li = document.createElement('LI');
-    let input_value = document.form_main.task.value;
-    let input_text = document.createTextNode(input_value);
+    let input_value = document.formMain.task.value;
 
-    li.appendChild(input_text);
+    li.innerText = input_value;
+
     document.querySelector('ul').appendChild(li);
-    document.form_main.task.value = '';
+    document.formMain.task.value = '';
 
     createCloseButton(li);
 }
 
-delAll.onclick = function () {
+// TODO rename to deleteAll - y
+deleteAll.onclick = function () {
     let elems = document.querySelectorAll('li');
-  
+
     elems.forEach(element => {
         element.remove();
     });
-    
+
 }
 
-onlyCheked.onclick = function () {
+// todo rename filterDone / filterChecked - y
+filterDone.onclick = function () {
     let elems = document.querySelectorAll('li');
-  
+
     elems.forEach(element => {
         if (element.className !== 'checked') {
             element.style.display = 'none';
@@ -50,9 +53,10 @@ onlyCheked.onclick = function () {
     });
 }
 
-onlyNotCheked.onclick = function () {
+// todo rename filterActive - y
+filterActive.onclick = function () {
     let elems = document.querySelectorAll('li');
-  
+
     elems.forEach(element => {
         if (element.className === 'checked') {
             element.style.display = 'none';
@@ -60,9 +64,10 @@ onlyNotCheked.onclick = function () {
     });
 }
 
-everyLi.onclick = function () {
+// todo rename to filterAll - y
+filterAll.onclick = function () {
     let elems = document.querySelectorAll('li');
-  
+
     elems.forEach(element => {
         element.style.display = '';
     });

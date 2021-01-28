@@ -1,40 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
     <title>app 2</title>
 </head>
+
 <body>
-    <div><h1>To-Do List</h1></div>
-    
+    <article>
+        <div>
+            <h1>To-Do List</h1>
+        </div>
 
-    <div>
-        <form name="form_main">
-            <input type="text" name="task" id="task" />
-            <button type="button" onclick="add()">Добавить</button>
-        </form> 
-    </div>
- 
 
-    <div>
-        <fieldset>
-            <ul>
-                <li>First one</li>
-                <li>Second</li>
-            </ul>
-        </fieldset>
-    </div>
+        <div>
+            <form name="formMain" action="javascript: add();">
+                <input type="text" name="task" id="task" />
+                <button type="button" onclick="add()" id="da">Добавить</button>
+            </form>
+        </div>
 
-    <div>
-        <button id="delAll">Очистить</button>
-        <button id="everyLi">Все задачи</button>
-        <button id="onlyCheked">Только выполненные</button>
-        <button id="onlyNotCheked">Только не выполненные</button>
-    </div>
-    
+
+        <div>
+            <fieldset>
+                <ul>
+                    <li>First one</li>
+                    <li>Second</li>
+                    <li>Third</li>
+                    <li>Fourth</li>
+                    <li>Fifth</li>
+                </ul>
+            </fieldset>
+        </div>
+
+        <div class="btns">
+            <button class="btn1" id="deleteAll">Очистить</button>
+            <button class="btn2" id="filterAll">Все задачи</button>
+            <button class="btn3" id="filterDone">Только выполненные</button>
+            <button class="btn4" id="filterActive">Только не выполненные</button>
+        </div>
+    </article>
+
 
     <script src="logic.js"></script>
 </body>
+
 </html>

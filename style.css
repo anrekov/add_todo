@@ -1,26 +1,87 @@
+body { 
+    background-color:  rgb(220, 243, 242);
+}
+
+article {
+    background-color: rgb(253, 241, 230);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-bottom: 5%;
+}
+
 div {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     margin-bottom: 10px;
+    font-size: large;
 }
 
 .checked {
     text-decoration: line-through;
+    color: rgb(106, 106, 114);;
+    background-color: rgb(238, 251, 255);
   }
 
 fieldset {
-    width: 50%;
+    width: calc(90% - 1.5em + 5px);
+    background-color: rgb(244, 245, 250);
+    padding-left: -2px;
 }
 
 .close {
-    background-color: rgb(230, 120, 120);
+    background-color: rgb(243, 142, 142);
     margin-left: 10px;
-    padding-left: 3px;
-    padding-right: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
     border-radius: 50%;
+    position: absolute;
+    right: 25%;
 }
 
 button {
-    margin-left: 5px;
+    margin-right: 5px;
+    padding: 5px;
+    font-size: 16px;
+    background-color: rgb(240, 240, 220);;
+}
+
+li {
+    font-size: large;
+}
+
+.btns button {
+    width: calc( 22% - 2px );
+}
+
+form {
+    width: 90%;
+}
+
+input {
+    width: calc(100% - 115px);
+    padding: 6px;
+}
+
+ul li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+span:hover {
+    cursor: pointer;
+    background-color: rgb(255, 84, 53);
+}
+
+li:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.1);;
+}
+
+button:hover {
+    background-color: rgb(195, 223, 141);
 }
