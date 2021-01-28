@@ -12,7 +12,7 @@ function createCloseButton(li) {
 // Всем li создать кнопку удаления
 document.querySelectorAll('li').forEach(createCloseButton);
 
-// Добавления класса при нажатии на элемент li
+// Добавление класса при нажатии на элемент li
 document.querySelector('ul').addEventListener('click', (e) => {
 if (e.target.tagName === 'LI')
     e.target.classList.toggle('checked');
@@ -31,7 +31,7 @@ function add() {
     createCloseButton(li);
 }
 
-DelAll.onclick = function () {
+delAll.onclick = function () {
     let elems = document.querySelectorAll('li');
   
     elems.forEach(element => {
@@ -40,23 +40,30 @@ DelAll.onclick = function () {
     
 }
 
-OnlyCheked.onclick = function () {
+onlyCheked.onclick = function () {
     let elems = document.querySelectorAll('li');
   
     elems.forEach(element => {
         if (element.className !== 'checked') {
-            element.remove();
-        }
+            element.style.display = 'none';
+        } else element.style.display = '';
     });
 }
 
-OnlyNotCheked.onclick = function () {
+onlyNotCheked.onclick = function () {
     let elems = document.querySelectorAll('li');
   
     elems.forEach(element => {
         if (element.className === 'checked') {
-            element.remove();
-        }
+            element.style.display = 'none';
+        } else element.style.display = '';
     });
+}
 
+everyLi.onclick = function () {
+    let elems = document.querySelectorAll('li');
+  
+    elems.forEach(element => {
+        element.style.display = '';
+    });
 }
