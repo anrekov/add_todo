@@ -1,5 +1,3 @@
-// TODO form has submit function
-
 function createCloseButton(li) {
     let span = document.createElement('SPAN');
 
@@ -32,7 +30,6 @@ function add() {
     createCloseButton(li);
 }
 
-// TODO rename to deleteAll - y
 deleteAll.onclick = function () {
     let elems = document.querySelectorAll('li');
 
@@ -42,33 +39,30 @@ deleteAll.onclick = function () {
 
 }
 
-// todo rename filterDone / filterChecked - y
 filterDone.onclick = function () {
     let elems = document.querySelectorAll('li');
 
     elems.forEach(element => {
         if (element.className !== 'checked') {
             element.style.display = 'none';
-        } else element.style.display = '';
+        } else element.style.display = 'list-item';
     });
 }
 
-// todo rename filterActive - y
 filterActive.onclick = function () {
     let elems = document.querySelectorAll('li');
 
     elems.forEach(element => {
         if (element.className === 'checked') {
             element.style.display = 'none';
-        } else element.style.display = '';
+        } else element.style.display = 'list-item';
     });
 }
 
-// todo rename to filterAll - y
 filterAll.onclick = function () {
     let elems = document.querySelectorAll('li');
 
     elems.forEach(element => {
-        element.style.display = '';
+        element.style.display = 'list-item';
     });
 }
