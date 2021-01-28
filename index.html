@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>app 2</title>
+</head>
+<body>
+    <div><h1>To-Do List</h1></div>
+    
+
+    <div>
+        <form name="form_main">
+            <input type="text" name="task" id="task" />
+            <button type="button" onclick="add()">Добавить</button>
+        </form> 
+    </div>
+ 
+
+    <div>
+        <fieldset>
+            <ul>
+                <li>First one</li>
+                <li>Second</li>
+            </ul>
+        </fieldset>
+    </div>
+
+    <div>
+        <button id="DelAll">Очистить</button>
+        <button id="OnlyCheked">Только выполненные</button>
+        <button id="OnlyNotCheked">Только не выполненные</button>
+    </div>
+    
+
+    <script src="logic.js"></script>
+</body>
+</html>

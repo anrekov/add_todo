@@ -1,0 +1,26 @@
+div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.checked {
+    text-decoration: line-through;
+  }
+
+fieldset {
+    width: 50%;
+}
+
+.close {
+    background-color: rgb(230, 120, 120);
+    margin-left: 10px;
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: 50%;
+}
+
+button {
+    margin-left: 5px;
+}
